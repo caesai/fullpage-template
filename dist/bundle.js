@@ -32743,12 +32743,13 @@ var Sections = function (_React$Component) {
         anchors: ['01', '02', '03', '04', '05', '06', '07', '08'],
         navigationTooltips: ['01', '02', '03', '04', '05', '06', '07', '08'],
         menu: '#leftMenu',
-        onLeave: function onLeave(index, nextIndex, direction) {
-          if (index == '01') {
-            console.log('da');
-            document.querySelector('.topMenu').classList.add('white');
-          } else {
+        afterLoad: function afterLoad(anchorLink, index) {
+          if (index == '01' || index == '05' || index == '08') {
             document.querySelector('.topMenu').classList.remove('white');
+            document.querySelector('.footer').classList.remove('white');
+          } else {
+            document.querySelector('.topMenu').classList.add('white');
+            document.querySelector('.footer').classList.add('white');
           }
         }
       });
@@ -32759,7 +32760,6 @@ var Sections = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement(_TopMenu2.default, null),
         _react2.default.createElement(_TopMenu2.default, null),
         _react2.default.createElement(
           'div',

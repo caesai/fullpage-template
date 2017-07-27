@@ -105,10 +105,14 @@ body {
     .topMenu.white .menu .menu_toogler span {
       color: #fff;
       background: #fff; }
-    .topMenu.white .top_logo a {
-      background-image: url(/dist//img/logo_white.png); }
+    .topMenu.white .top_logo {
+      color: #fff; }
+      .topMenu.white .top_logo a {
+        background-image: url(/dist//img/logo_white.png); }
     .topMenu.white .top_contacts .top_contacts_inner a {
       color: #fff; }
+      .topMenu.white .top_contacts .top_contacts_inner a i {
+        color: #fff; }
 
 .navMenu {
   position: fixed;
@@ -117,8 +121,7 @@ body {
   width: 100%;
   z-index: 15;
   background-color: rgba(255, 255, 255, 0.8);
-  font-family: FuturaPTLight;
-  font-size: 18px;
+  font: 20px/1.3 FuturaPTLight;
   display: none; }
   .navMenu .closeMenu {
     display: table;
@@ -146,6 +149,11 @@ body {
       letter-spacing: 0.7px;
       text-align: right;
       margin: 0 14px; }
+      .navMenu ul li a {
+        color: #000;
+        text-decoration: none; }
+        .navMenu ul li a:hover {
+          text-decoration: underline; }
   .navMenu.active {
     display: block; }
 
@@ -186,10 +194,6 @@ body {
     font-size: 18px;
     color: #000; }
     .section1 .title p {
-      font-family: FuturaPT;
-      font-weight: 300;
-      line-height: 1.48;
-      letter-spacing: 0.6px;
       text-align: center;
       max-width: none; }
   .section1 h1 {
@@ -306,6 +310,7 @@ body {
 .more {
   display: inline-block;
   margin-top: 20px;
+  font: 21px/1.3 FuturaPTLight;
   text-transform: uppercase;
   text-decoration: underline;
   color: #fff;
@@ -322,3 +327,5 @@ body {
     float: left; }
   .footer .address {
     float: right; }
+  .footer.white {
+    color: #fff; }

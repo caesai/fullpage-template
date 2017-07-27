@@ -28,8 +28,10 @@ export default class Sections extends React.Component {
       afterLoad: function(anchorLink, index){
         if ((index == '01')||(index == '05')||(index == '08')) {
           document.querySelector('.topMenu').classList.remove('white');
+          document.querySelector('.footer').classList.remove('white');
         } else {
           document.querySelector('.topMenu').classList.add('white');
+          document.querySelector('.footer').classList.add('white');
         }
       }
     });
