@@ -1,10 +1,228 @@
+@font-face {
+  font-family: BitterRegular;
+  src: url(/dist/fonts/BitterRegular.eot);
+  src: url(/dist/fonts/BitterRegular.woff) format("woff"), url(/dist/fonts/BitterRegular.ttf) format("truetype"), url(/dist/fonts/BitterRegular.eot?#iefix) format("embedded-opentype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: FuturaPTLight;
+  src: url(/dist/fonts/FuturaPTLight.eot);
+  src: url(/dist/fonts/FuturaPTLight.woff) format("woff"), url(/dist/fonts/FuturaPTLight.ttf) format("truetype"), url(/dist/fonts/FuturaPTLight.eot?#iefix) format("embedded-opentype"), url(/assets/dist/fonts/FuturaPTLight/FuturaPTLight.svg) format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: FuturaPTBook;
+  src: url(/dist/fonts/FuturaPTBook.eot);
+  src: url(/dist/fonts/FuturaPTBook.woff) format("woff"), url(/dist/fonts/FuturaPTBook.ttf) format("truetype"), url(/dist/fonts/FuturaPTBook.eot?#iefix) format("embedded-opentype");
+  font-weight: 400;
+  font-style: normal; }
+
+* {
+  box-sizing: border-box; }
+
 body {
+  margin: 0;
   background-color: #fff; }
+
+.topMenu {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  margin: auto;
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
+  padding-top: 40px; }
+  .topMenu .menu {
+    position: absolute;
+    top: 15px;
+    left: 25px; }
+    .topMenu .menu .menu_toogler {
+      position: relative;
+      display: inline-block;
+      margin-right: 24px;
+      top: 2px;
+      cursor: pointer;
+      transition: 0.1s ease-out 0.2s; }
+      .topMenu .menu .menu_toogler span {
+        width: 35px;
+        height: 2px;
+        margin-bottom: 7px;
+        background: #222527;
+        position: relative;
+        display: block; }
+      .topMenu .menu .menu_toogler:hover {
+        opacity: 0.6; }
+  .topMenu .top_logo {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin: auto;
+    top: -10px;
+    left: 0;
+    right: 0;
+    width: 93px; }
+    .topMenu .top_logo a {
+      width: 93px;
+      height: 82px;
+      background: url(/dist//img/logo.png);
+      background-repeat: no-repeat;
+      background-position: 50%;
+      display: inline-block;
+      position: relative; }
+  .topMenu .top_contacts {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center; }
+    .topMenu .top_contacts .top_contacts_inner {
+      display: flex;
+      white-space: nowrap;
+      align-items: center; }
+      .topMenu .top_contacts .top_contacts_inner a {
+        font: 22px/1 FuturaPTBook;
+        text-decoration: none;
+        color: #191919;
+        margin: 0 12px; }
+        .topMenu .top_contacts .top_contacts_inner a i {
+          font-size: 30px; }
+
+.navMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 15;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-family: FuturaPTLight;
+  font-size: 18px;
+  display: none; }
+  .navMenu .closeMenu {
+    display: table;
+    height: 57px;
+    margin: 18px;
+    float: left; }
+  .navMenu .closeBtn {
+    display: table-cell;
+    color: #000;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: 0.1s ease-out 0.2s; }
+    .navMenu .closeBtn i {
+      margin-right: 10px; }
+    .navMenu .closeBtn:hover {
+      opacity: 0.7; }
+  .navMenu ul {
+    list-style: none;
+    float: right; }
+    .navMenu ul li {
+      display: inline-block;
+      cursor: pointer;
+      line-height: 3.21;
+      letter-spacing: 0.7px;
+      text-align: right;
+      margin: 0 14px; }
+  .navMenu.active {
+    display: block; }
+
+.section {
+  position: relative; }
 
 .section1 {
-  background-image: url(dist//img/screen1.jpg);
+  background-image: url(/dist//img/screen1.jpg);
   background-size: cover;
   background-color: #fff; }
+  .section1 .title {
+    position: absolute;
+    max-width: 600px;
+    max-height: 250px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: 18px; }
+    .section1 .title p {
+      font-family: FuturaPT;
+      font-weight: 300;
+      line-height: 1.48;
+      letter-spacing: 0.6px;
+      text-align: center; }
+  .section1 h1 {
+    font-family: BitterRegular;
+    font-weight: 100;
+    font-size: 40px;
+    line-height: 0.57;
+    letter-spacing: 1.8px;
+    text-align: center; }
 
-.logg {
-  text-decoration: line-through; }
+.section2 {
+  background-image: url(/dist//img/screen2.jpg);
+  background-size: cover; }
+  .section2 .title {
+    position: absolute;
+    max-width: 600px;
+    max-height: 300px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    color: #fff; }
+    .section2 .title h2 {
+      font: 30px/1 FuturaPTBook; }
+    .section2 .title p {
+      font: 18px/1.3 FuturaPTLight; }
+  .section2 .more {
+    display: inline-block;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #fff;
+    cursor: pointer; }
+
+.section3 {
+  background-image: url(/dist//img/screen4.jpg);
+  background-size: cover; }
+  .section3 .title {
+    position: absolute;
+    max-width: 600px;
+    max-height: 300px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    color: #fff; }
+    .section3 .title h2 {
+      font: 30px/1 FuturaPTBook; }
+    .section3 .title p {
+      font: 18px/1.3 FuturaPTLight; }
+  .section3 .more {
+    display: inline-block;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #fff;
+    cursor: pointer; }
+
+.footer {
+  position: absolute;
+  bottom: 20px;
+  text-transform: uppercase;
+  font: 18px/1 FuturaPTBook;
+  width: 100%;
+  padding: 0 20px; }
+  .footer .copyright {
+    float: left; }
+  .footer .address {
+    float: right; }

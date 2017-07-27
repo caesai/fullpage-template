@@ -34,7 +34,11 @@ const config = {
               loader: 'file-loader?name=/img/[name].[ext]'
             }
           ]
-        }
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        use: ['url-loader?limit=100&name=fonts/[name].[ext]']
+      }
     ]
   },
   plugins: [
