@@ -12,17 +12,18 @@ export default class TopMenu extends React.Component {
     return(
       <div ref="topMenu" className="topMenu">
         <NavMenu isActive={this.state.isActive} />
-        <div className="menu">
-            <div className="menu_toogler" onClick={ () => {
-                this.setState({
-                  isActive: !this.state.isActive
-                })
-              }
-            }>
+        <div className="menu" onClick={ () => {
+            this.setState({
+              isActive: !this.state.isActive
+            })
+          }
+        }>
+            <div className="menu_toogler">
               <span></span>
               <span></span>
               <span></span>
             </div>
+            <p>Меню</p>
         </div>
         <div className="top_logo">
             <a href="#"></a>

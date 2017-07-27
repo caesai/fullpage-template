@@ -39,7 +39,8 @@ body {
   .topMenu .menu {
     position: absolute;
     top: 15px;
-    left: 25px; }
+    left: 25px;
+    cursor: pointer; }
     .topMenu .menu .menu_toogler {
       position: relative;
       display: inline-block;
@@ -56,6 +57,11 @@ body {
         display: block; }
       .topMenu .menu .menu_toogler:hover {
         opacity: 0.6; }
+    .topMenu .menu p {
+      top: -12px;
+      position: absolute;
+      right: -35px;
+      text-transform: uppercase; }
   .topMenu .top_logo {
     position: absolute;
     display: flex;
@@ -94,6 +100,15 @@ body {
         margin: 0 12px; }
         .topMenu .top_contacts .top_contacts_inner a i {
           font-size: 30px; }
+  .topMenu.white {
+    color: #fff; }
+    .topMenu.white .menu .menu_toogler span {
+      color: #fff;
+      background: #fff; }
+    .topMenu.white .top_logo a {
+      background-image: url(/dist//img/logo_white.png); }
+    .topMenu.white .top_contacts .top_contacts_inner a {
+      color: #fff; }
 
 .navMenu {
   position: fixed;
@@ -134,6 +149,30 @@ body {
   .navMenu.active {
     display: block; }
 
+#fp-nav {
+  position: absolute;
+  z-index: 15;
+  left: 25px;
+  top: 0;
+  bottom: 0;
+  margin-top: auto !important;
+  margin: auto;
+  max-height: 360px; }
+  #fp-nav ul {
+    list-style: none;
+    padding: 0; }
+    #fp-nav ul li {
+      margin-bottom: 25px;
+      cursor: pointer; }
+      #fp-nav ul li a.active + .fp-tooltip {
+        text-decoration: line-through;
+        opacity: 1; }
+      #fp-nav ul li .fp-tooltip {
+        font-family: FuturaPT;
+        opacity: 0.5; }
+      #fp-nav ul li:hover .fp-tooltip {
+        opacity: 1; }
+
 .section {
   position: relative; }
 
@@ -142,21 +181,17 @@ body {
   background-size: cover;
   background-color: #fff; }
   .section1 .title {
-    position: absolute;
     max-width: 600px;
     max-height: 250px;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    font-size: 18px; }
+    font-size: 18px;
+    color: #000; }
     .section1 .title p {
       font-family: FuturaPT;
       font-weight: 300;
       line-height: 1.48;
       letter-spacing: 0.6px;
-      text-align: center; }
+      text-align: center;
+      max-width: none; }
   .section1 h1 {
     font-family: BitterRegular;
     font-weight: 100;
@@ -168,52 +203,113 @@ body {
 .section2 {
   background-image: url(/dist//img/screen2.jpg);
   background-size: cover; }
-  .section2 .title {
-    position: absolute;
-    max-width: 600px;
-    max-height: 300px;
-    margin: auto;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    color: #fff; }
-    .section2 .title h2 {
-      font: 30px/1 FuturaPTBook; }
-    .section2 .title p {
-      font: 18px/1.3 FuturaPTLight; }
-  .section2 .more {
-    display: inline-block;
-    margin-top: 20px;
-    text-transform: uppercase;
-    text-decoration: underline;
-    color: #fff;
-    cursor: pointer; }
 
 .section3 {
   background-image: url(/dist//img/screen4.jpg);
   background-size: cover; }
-  .section3 .title {
-    position: absolute;
-    max-width: 600px;
-    max-height: 300px;
-    margin: auto;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    color: #fff; }
-    .section3 .title h2 {
-      font: 30px/1 FuturaPTBook; }
-    .section3 .title p {
-      font: 18px/1.3 FuturaPTLight; }
-  .section3 .more {
+
+.section4 {
+  background-image: url(/dist//img/screen5.jpg);
+  background-size: cover; }
+  .section4 .title {
+    text-align: center;
+    max-width: 600px; }
+    .section4 .title h2 {
+      font-size: 40px; }
+    .section4 .title p {
+      font-size: 23px;
+      max-width: none; }
+
+.section5 .crossRow {
+  display: table;
+  width: 100%;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2); }
+  .section5 .crossRow:nth-child(2) {
+    border: none; }
+
+.section5 .crossHair {
+  max-width: 1100px;
+  max-height: 460px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
+  .section5 .crossHair .crossBlock {
+    width: 49%;
     display: inline-block;
-    margin-top: 20px;
-    text-transform: uppercase;
-    text-decoration: underline;
-    color: #fff;
-    cursor: pointer; }
+    border-right: 2px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 30px;
+    padding-right: 20px; }
+    .section5 .crossHair .crossBlock + .crossBlock {
+      float: right;
+      border: none;
+      padding-left: 20px;
+      padding-right: 0;
+      padding-bottom: 0; }
+    .section5 .crossHair .crossBlock h3 {
+      font: 33px/1 FuturaPTBook; }
+    .section5 .crossHair .crossBlock p {
+      font: 20px/1.2 FuturaPTLight; }
+    .section5 .crossHair .crossBlock .more {
+      color: #000; }
+
+.section6 {
+  background-image: url(/dist//img/screen7.jpg);
+  background-size: cover; }
+
+.section7 {
+  background-image: url(/dist//img/screen8.jpg);
+  background-size: cover; }
+
+.contactSection .title {
+  text-align: center;
+  color: #000;
+  max-width: 900px;
+  max-height: 500px; }
+  .contactSection .title p {
+    max-width: none; }
+
+.contactSection .callback-btn {
+  width: 275px;
+  height: 56px;
+  background-color: #191919;
+  background-color: var(--black);
+  border: solid 1px #252525;
+  cursor: pointer; }
+
+#g_map {
+  max-width: 1082px;
+  max-height: 381px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.1);
+  margin: 0 auto; }
+
+.title {
+  position: absolute;
+  max-width: 900px;
+  max-height: 300px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  color: #fff; }
+  .title h2 {
+    font: 40px/1 FuturaPTBook; }
+  .title p {
+    font: 21px/1.3 FuturaPTLight;
+    max-width: 600px; }
+
+.more {
+  display: inline-block;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: #fff;
+  cursor: pointer; }
 
 .footer {
   position: absolute;

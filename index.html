@@ -12,6 +12,28 @@
     <div id="app"></div>
 
     <script type="text/javascript" src="dist/bundle.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAL8WniUT1-VY0v-IdS4ppLK_1V2bjVaYM&callback=initMap" async defer="defer"></script>
+    <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('g_map'), {
+                center: {lat: 55.417430, lng: 37.491923},
+                zoom: 15,
+                disableDefaultUI: true,
+                scrollwheel: false,
+                zoomControl: true,
+                styles: [{
+                    stylers: [{
+                        saturation: -100
+                    }]
+                }],
+            });
+            var image = '/dist/img/pointmap.png';
+            var mapMarker = new google.maps.Marker({
+                position: {lat: 55.417430, lng: 37.491923},
+                map: map,
+                icon: image
+            });
+        }
     </script>
   </body>
 </html>

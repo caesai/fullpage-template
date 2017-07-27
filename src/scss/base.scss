@@ -46,6 +46,7 @@ body {
     position: absolute;
     top: 15px;
     left: 25px;
+    cursor: pointer;
 
     .menu_toogler {
       position: relative;
@@ -67,6 +68,13 @@ body {
       &:hover {
         opacity: 0.6;
       }
+    }
+
+    p {
+      top: -12px;
+      position: absolute;
+      right: -35px;
+      text-transform: uppercase;
     }
   }
 
@@ -115,6 +123,36 @@ body {
 
         i {
           font-size: 30px;
+        }
+      }
+    }
+  }
+
+  &.white {
+    color:#fff;
+
+    .menu {
+
+      .menu_toogler {
+        span {
+          color: #fff;
+          background: #fff;
+        }
+      }
+    }
+    .top_logo {
+      color: #fff;
+
+      a {
+        background-image: url(../img/logo_white.png);
+      }
+    }
+    .top_contacts {
+      .top_contacts_inner a {
+        color:#fff;
+
+        i {
+          color:#fff;
         }
       }
     }
@@ -175,6 +213,46 @@ body {
   }
 }
 
+#fp-nav {
+  position: absolute;
+  z-index: 15;
+  left: 25px;
+  top: 0;
+  bottom: 0;
+  margin-top: auto!important;
+  margin: auto;
+  max-height: 360px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 25px;
+      cursor: pointer;
+
+      a {
+
+        &.active + .fp-tooltip {
+          text-decoration: line-through;
+          opacity: 1;
+        }
+      }
+
+      .fp-tooltip {
+        font-family: FuturaPT;
+        opacity: 0.5;
+      }
+
+      &:hover {
+        .fp-tooltip {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
 .section {
   position: relative;
 }
@@ -185,15 +263,10 @@ body {
   background-color: #fff;
 
   .title {
-    position: absolute;
     max-width: 600px;
     max-height: 250px;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
     font-size: 18px;
+    color: #000;
 
     p {
       font-family: FuturaPT;
@@ -201,6 +274,7 @@ body {
       line-height: 1.48;
       letter-spacing: 0.6px;
       text-align: center;
+      max-width: none;
     }
   }
 
@@ -217,69 +291,154 @@ body {
 .section2 {
   background-image: url(../img/screen2.jpg);
   background-size: cover;
-
-  .title {
-    position: absolute;
-    max-width: 600px;
-    max-height: 300px;
-    margin: auto;
-    left:0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    color: #fff;
-
-    h2 {
-      font: 30px/1 FuturaPTBook;
-    }
-
-    p {
-      font: 18px/1.3 FuturaPTLight;
-    }
-  }
-
-  .more {
-    display: inline-block;
-    margin-top: 20px;
-    text-transform: uppercase;
-    text-decoration: underline;
-    color: #fff;
-    cursor: pointer;
-  }
 }
 
 .section3 {
   background-image: url(../img/screen4.jpg);
   background-size: cover;
+}
+
+.section4 {
+  background-image: url(../img/screen5.jpg);
+  background-size: cover;
 
   .title {
-    position: absolute;
+    text-align: center;
     max-width: 600px;
-    max-height: 300px;
-    margin: auto;
-    left:0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    color: #fff;
 
     h2 {
-      font: 30px/1 FuturaPTBook;
+      font-size: 40px;
     }
 
     p {
-      font: 18px/1.3 FuturaPTLight;
+      font-size: 23px;
+      max-width: none;
+    }
+  }
+}
+
+.section5 {
+
+  .crossRow {
+    display: table;
+    width: 100%;
+    border-bottom: 2px solid rgba(0,0,0,0.2);
+
+    &:nth-child(2) {
+      border: none;
     }
   }
 
-  .more {
-    display: inline-block;
-    margin-top: 20px;
-    text-transform: uppercase;
-    text-decoration: underline;
-    color: #fff;
+  .crossHair {
+    max-width: 1100px;
+    max-height: 460px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    .crossBlock {
+      width: 49%;
+      display: inline-block;
+      border-right: 2px solid rgba(0,0,0,0.2);
+      padding-bottom: 30px;
+      padding-right: 20px;
+
+      &+.crossBlock {
+        float: right;
+        border: none;
+        padding-left: 20px;
+        padding-right: 0;
+        padding-bottom: 0;
+      }
+
+      h3 {
+        font: 33px/1 FuturaPTBook;
+      }
+
+      p {
+        font: 20px/1.2 FuturaPTLight;
+      }
+
+      .more {
+        color: #000;
+      }
+    }
+  }
+}
+
+.section6 {
+  background-image: url(../img/screen7.jpg);
+  background-size: cover;
+}
+
+.section7 {
+  background-image: url(../img/screen8.jpg);
+  background-size: cover;
+}
+
+.contactSection {
+
+  .title {
+    text-align: center;
+    color: #000;
+    max-width: 900px;
+    max-height: 500px;
+
+    p {
+      max-width: none;
+    }
+  }
+
+  .callback-btn {
+    width: 275px;
+    height: 56px;
+    background-color: #191919;
+    background-color: var(--black);
+    border: solid 1px #252525;
     cursor: pointer;
   }
+}
+
+#g_map {
+  max-width: 1082px;
+  max-height: 381px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.title {
+  position: absolute;
+  max-width: 900px;
+  max-height: 300px;
+  margin: auto;
+  left:0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  color: #fff;
+
+  h2 {
+    font: 40px/1 FuturaPTBook;
+  }
+
+  p {
+    font: 21px/1.3 FuturaPTLight;
+    max-width: 600px;
+  }
+}
+
+.more {
+  display: inline-block;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: #fff;
+  cursor: pointer;
 }
 
 .footer {

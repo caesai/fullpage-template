@@ -18,13 +18,13 @@ export default class NavMenu extends React.Component {
         </div>
 
         <ul>
-          <li>Главная</li>
-          <li>Первый мужской разряд</li>
-          <li>Галерея</li>
-          <li>Спа-центр</li>
-          <li>Сувениры</li>
-          <li>Информация</li>
-          <li>Контакты</li>
+          <li><a href="#01">Главная</a></li>
+          <li><a href="#02">Первый мужской разряд</a></li>
+          <li><a href="#03">Галерея</a></li>
+          <li><a href="#04">Спа-центр</a></li>
+          <li><a href="#05">Сувениры</a></li>
+          <li><a href="#06">Информация</a></li>
+          <li><a href="#08">Контакты</a></li>
         </ul>
       </div>
     )
