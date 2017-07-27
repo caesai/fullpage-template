@@ -1,0 +1,10 @@
+body {
+  background-color: #fff; }
+
+.section1 {
+  background-image: url(dist//img/screen1.jpg);
+  background-size: cover;
+  background-color: #fff; }
+
+.logg {
+  text-decoration: line-through; }
